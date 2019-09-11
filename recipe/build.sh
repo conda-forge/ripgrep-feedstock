@@ -8,3 +8,6 @@ cargo install --features pcre2 --root "$PREFIX" --path .
 
 # strip debug symbols
 strip "$PREFIX/bin/rg"
+
+# remove extra build file
+rm -f "${PREFIX}/.crates.toml"
