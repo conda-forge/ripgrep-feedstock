@@ -6,7 +6,7 @@ set -o xtrace -o nounset -o pipefail -o errexit
 cargo install --locked --features pcre2 --root "$PREFIX" --path .
 
 # strip debug symbols
-strip "$PREFIX/bin/rg"
+"$STRIP" "$PREFIX/bin/rg"
 
 # remove extra build file
 rm -f "${PREFIX}/.crates.toml"
