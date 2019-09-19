@@ -14,7 +14,8 @@ build:
 requirements:
   build:
     - rust
-    - {{ compiler("c") }}
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
 
 test:
   commands:
