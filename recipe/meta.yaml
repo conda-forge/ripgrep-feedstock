@@ -1,15 +1,15 @@
-{% set version = "11.0.2" %}
+{% set version = "12.0.0" %}
 
 package:
   name: ripgrep
   version: {{ version }}
 
 source:
-  url: https://github.com/BurntSushi/ripgrep/archive/{{ version }}.tar.gz
-  sha256: 0983861279936ada8bc7a6d5d663d590ad34eb44a44c75c2d6ccd0ab33490055
+  url: https://github.com/BurntSushi/ripgrep/archive/{{ version }}.zip
+  sha256: 389b6c9b68f073ea05d16168d9ead13b4ebd550873464494cdea9b787809d3df
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
