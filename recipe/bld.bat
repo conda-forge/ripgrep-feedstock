@@ -1,11 +1,11 @@
 :: build
-cargo install --locked  --features pcre2 --root "%PREFIX%" --path . || goto :error
+cargo install --locked  --features pcre2 --root "%LIBRARY_PREFIX%" --path . || goto :error
 
 :: strip debug symbols
-strip "%PREFIX%\bin\rg.exe" || goto :error
+strip "%LIBRARY_PREFIX%\bin\rg.exe" || goto :error
 
 :: remove extra build file
-del /F /Q "%PREFIX%\.crates.toml"
+del /F /Q "%LIBRARY_PREFIX%\.crates.toml"
 
 goto :EOF
 
