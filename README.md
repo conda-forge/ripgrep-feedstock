@@ -26,7 +26,7 @@ Current build status
     <td>Drone</td>
     <td>
       <a href="https://cloud.drone.io/conda-forge/ripgrep-feedstock">
-        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/master.svg?label=Linux">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/ripgrep-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr>
@@ -178,4 +178,5 @@ Feedstock Maintainers
 =====================
 
 * [@dbast](https://github.com/dbast/)
+* [@seanyen](https://github.com/seanyen/)
 

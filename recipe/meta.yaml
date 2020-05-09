@@ -1,4 +1,4 @@
-{% set version = "12.0.1" %}
+{% set version = "12.1.0" %}
 
 package:
   name: ripgrep
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/BurntSushi/ripgrep/archive/{{ version }}.tar.gz
-  sha256: 5be34aa77a36ac9d8f1297a0d97069e4653e03f61c67d192cee32944cd2b6329
+  sha256: ca2d11dd7b7346734d47ad8073468e9c409fbe85842a608d372b8d4fb36be291
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
