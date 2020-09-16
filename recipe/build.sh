@@ -7,7 +7,6 @@ if [[ "$target_platform" == osx* ]]; then
   if [[ "$target_platform" == osx-arm64 ]]; then
     export CFLAGS="$CFLAGS -arch arm64"
     export CPPFLAGS="$CPPFLAGS -arch arm64"
-    export CXXFLAGS="$CXXFLAGS -arch arm64"
   fi
 fi
 
