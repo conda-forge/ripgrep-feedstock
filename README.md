@@ -5,11 +5,9 @@ Home: https://github.com/BurntSushi/ripgrep
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ripgrep-feedstock/blob/master/LICENSE.txt)
 
 Summary: ripgrep recursively searches directories for a regex pattern
-
-
 
 Current build status
 ====================
