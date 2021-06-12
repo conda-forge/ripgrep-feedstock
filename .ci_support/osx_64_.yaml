@@ -3,12 +3,16 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '10'
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 macos_machine:
 - x86_64-apple-darwin13.4.0
+rust_compiler:
+- rust
+rust_compiler_version:
+- '1.46'
 target_platform:
 - osx-64
