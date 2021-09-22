@@ -16,7 +16,7 @@ requirements:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - cargo-bundle-licenses            # [not linux_ppc64le]
+    - cargo-bundle-licenses            # [not ppc64le]
 
 test:
   commands:
