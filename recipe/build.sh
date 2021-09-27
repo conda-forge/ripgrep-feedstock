@@ -5,9 +5,7 @@ set -o xtrace -o nounset -o pipefail -o errexit
 
 cargo-bundle-licenses \
     --format yaml \
-    --output CI.THIRDPARTY.yml \
-    --previous "${RECIPE_DIR}/THIRDPARTY.yml" \
-    --check-previous
+    --output THIRDPARTY.yml
 
 # build statically linked binary with Rust
 cargo install --locked --features pcre2 --root "$PREFIX" --path .
