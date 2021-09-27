@@ -27,7 +27,9 @@ about:
   license: MIT
   summary: ripgrep recursively searches directories for a regex pattern
   license_family: MIT
-  license_file: LICENSE-MIT
+  license_file: 
+    - LICENSE-MIT
+    - THIRDPARTY.yml
 
 extra:
   recipe-maintainers:
