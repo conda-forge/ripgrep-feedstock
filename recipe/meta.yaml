@@ -9,13 +9,14 @@ source:
   sha256: 0fb17aaf285b3eee8ddab17b833af1e190d73de317ff9648751ab0660d763ed2
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - cargo-bundle-licenses
 
 test:
   commands:
@@ -26,7 +27,9 @@ about:
   license: MIT
   summary: ripgrep recursively searches directories for a regex pattern
   license_family: MIT
-  license_file: LICENSE-MIT
+  license_file: 
+    - LICENSE-MIT
+    - THIRDPARTY.yml
 
 extra:
   recipe-maintainers:

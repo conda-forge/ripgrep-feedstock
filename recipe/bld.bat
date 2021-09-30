@@ -1,3 +1,6 @@
+:: check licenses
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+
 :: build
 cargo install --locked  --features pcre2 --root "%LIBRARY_PREFIX%" --path . || goto :error
 
