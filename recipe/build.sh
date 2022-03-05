@@ -15,3 +15,8 @@ cargo install --locked --features pcre2 --root "$PREFIX" --path .
 
 # remove extra build file
 rm -f "${PREFIX}/.crates.toml"
+
+# Add the man pages
+_manpage="$(find target -name "rg.1" | head -n 1)"
+mkdir -p "${PREFIX}/share/man/man1"
+cp "${_manpage:?}" "${PREFIX}/share/man/man1"
