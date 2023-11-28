@@ -1,4 +1,4 @@
-{% set version = "13.0.0" %}
+{% set version = "14.0.2" %}
 
 package:
   name: ripgrep
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/BurntSushi/ripgrep/archive/{{ version }}.tar.gz
-  sha256: 0fb17aaf285b3eee8ddab17b833af1e190d73de317ff9648751ab0660d763ed2
+  sha256: 2b9bd8a582d1fea70eb932e389e0895922b9a0147f65f9ad4b601b3f3a82a195
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
@@ -28,7 +28,7 @@ about:
   license: MIT
   summary: ripgrep recursively searches directories for a regex pattern
   license_family: MIT
-  license_file: 
+  license_file:
     - LICENSE-MIT
     - THIRDPARTY.yml
 
