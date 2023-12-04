@@ -15,8 +15,6 @@ cargo install --locked --features pcre2 --root "$PREFIX" --path .
 # remove extra build file
 rm -f "${PREFIX}/.crates.toml"
 
-if [[ "${HOST_PLATFORM}" != "osx-arm64" ]]; then
-    # Generate + add the man page
-    mkdir -p "${PREFIX}/share/man/man1"
-    "$PREFIX/bin/rg" --generate man > "${PREFIX}/share/man/man1/rg.1"
-fi
+# Generate + add the man page
+mkdir -p "${PREFIX}/share/man/man1"
+"$PREFIX/bin/rg" --generate man > "${PREFIX}/share/man/man1/rg.1" || true
