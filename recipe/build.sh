@@ -2,7 +2,6 @@
 
 set -o xtrace -o nounset -o pipefail -o errexit
 
-
 cargo-bundle-licenses \
     --format yaml \
     --output THIRDPARTY.yml
@@ -16,6 +15,8 @@ cargo install --locked --features pcre2 --root "$PREFIX" --path .
 # remove extra build file
 rm -f "${PREFIX}/.crates.toml"
 
-# Generate + add the man page
-mkdir -p "${PREFIX}/share/man/man1"
-"$PREFIX/bin/rg" --generate man > "${PREFIX}/share/man/man1/rg.1"
+if [[ "${HOST_PLATFORM}" != "osx-arm64" ]]; then
+    # Generate + add the man page
+    mkdir -p "${PREFIX}/share/man/man1"
+    "$PREFIX/bin/rg" --generate man > "${PREFIX}/share/man/man1/rg.1"
+fi
