@@ -4,6 +4,8 @@ channel_targets:
 - conda-forge main
 m2w64_c_compiler:
 - m2w64-toolchain
+m2w64_c_stdlib:
+- m2w64-toolchain
 rust_compiler:
 - rust
 target_platform:
