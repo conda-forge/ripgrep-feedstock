@@ -1,9 +1,11 @@
+c_compiler:
+- vs2019
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
-m2w64_c_compiler:
-- m2w64-toolchain
 rust_compiler:
 - rust
 target_platform:
