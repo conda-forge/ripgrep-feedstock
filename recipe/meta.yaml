@@ -14,6 +14,7 @@ build:
 requirements:
   build:
     - {{ compiler('rust') }}
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - cargo-bundle-licenses
     - asciidoctor                      # [not win]
