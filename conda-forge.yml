@@ -1,4 +1,5 @@
 build_platform:
+  linux_riscv64: linux_64
   osx_arm64: osx_64
   win_arm64: win_64
 conda_build:
