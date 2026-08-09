@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: ripgrep recursively searches directories for a regex pattern
 
+Development: https://github.com/BurntSushi/ripgrep
+
 Current build status
 ====================
 
