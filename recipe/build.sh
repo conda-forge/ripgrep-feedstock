@@ -4,6 +4,12 @@ set -o xtrace -o nounset -o pipefail -o errexit
 
 export CARGO_PROFILE_RELEASE_STRIP=symbols
 export CARGO_PROFILE_RELEASE_LTO=fat
+export PCRE2_SYS_STATIC=1
+# Rust links with -nodefaultlibs, so explicitly include the startup helpers
+# required by the oldest Linux sysroot.
+if [[ "${target_platform}" == linux-* ]]; then
+    export CARGO_BUILD_RUSTFLAGS="${CARGO_BUILD_RUSTFLAGS:-} -C link-arg=${CONDA_BUILD_SYSROOT}/usr/lib64/libc_nonshared.a"
+fi
 
 cargo-bundle-licenses \
     --format yaml \

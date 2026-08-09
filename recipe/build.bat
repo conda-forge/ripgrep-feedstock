@@ -2,6 +2,7 @@
 
 set CARGO_PROFILE_RELEASE_STRIP=symbols
 set CARGO_PROFILE_RELEASE_LTO=fat
+set PCRE2_SYS_STATIC=1
 set CARGO_EXTRA_ARGS=
 if %target_platform% neq %build_platform% (
   if %target_platform%==win-arm64 (
