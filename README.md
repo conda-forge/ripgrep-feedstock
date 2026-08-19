@@ -225,6 +225,3 @@ Feedstock Maintainers
 * [@dbast](https://github.com/dbast/)
 * [@seanyen](https://github.com/seanyen/)
 
-
-<!-- dummy commit to enable rerendering -->
-
