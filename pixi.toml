@@ -5,7 +5,7 @@
 
 [workspace]
 name = "ripgrep-feedstock"
-version = "2026.8.9"  # conda-smithy version used to generate this file
+version = "2026.11.6"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/ripgrep-feedstock"
 authors = ["@conda-forge/ripgrep"]
 channels = ["conda-forge"]
@@ -29,6 +29,7 @@ description = "Lint the feedstock recipe"
 [feature.build.dependencies]
 conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
+python = "3.14.*"
 rattler-build = "*"
 
 [feature.build.tasks.inspect-all]
@@ -38,74 +39,74 @@ description = "List contents of all packages found in rattler-build build direct
 cmd = "rattler-build build --recipe recipe"
 description = "Build ripgrep-feedstock directly (without setup scripts), no particular variant specified"
 [feature.build.tasks."build-linux_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_.yaml --target-platform linux-64"
 description = "Build ripgrep-feedstock with variant linux_64_ directly (without setup scripts)"
 [feature.build.tasks."debug-linux_64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_.yaml"
-description = "Build ripgrep-feedstock with variant linux_64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_.yaml --target-platform linux-64"
+description = "Debug ripgrep-feedstock with variant linux_64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant linux_64_"
 [feature.build.tasks."build-linux_aarch64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_.yaml --target-platform linux-aarch64"
 description = "Build ripgrep-feedstock with variant linux_aarch64_ directly (without setup scripts)"
 [feature.build.tasks."debug-linux_aarch64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_.yaml"
-description = "Build ripgrep-feedstock with variant linux_aarch64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_.yaml --target-platform linux-aarch64"
+description = "Debug ripgrep-feedstock with variant linux_aarch64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_aarch64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant linux_aarch64_"
 [feature.build.tasks."build-linux_ppc64le_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_.yaml --target-platform linux-ppc64le"
 description = "Build ripgrep-feedstock with variant linux_ppc64le_ directly (without setup scripts)"
 [feature.build.tasks."debug-linux_ppc64le_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_.yaml"
-description = "Build ripgrep-feedstock with variant linux_ppc64le_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_.yaml --target-platform linux-ppc64le"
+description = "Debug ripgrep-feedstock with variant linux_ppc64le_ directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_ppc64le_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant linux_ppc64le_"
 [feature.build.tasks."build-linux_riscv64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_riscv64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_riscv64_.yaml --target-platform linux-riscv64"
 description = "Build ripgrep-feedstock with variant linux_riscv64_ directly (without setup scripts)"
 [feature.build.tasks."debug-linux_riscv64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_riscv64_.yaml"
-description = "Build ripgrep-feedstock with variant linux_riscv64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_riscv64_.yaml --target-platform linux-riscv64"
+description = "Debug ripgrep-feedstock with variant linux_riscv64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-linux_riscv64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_riscv64_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant linux_riscv64_"
 [feature.build.tasks."build-osx_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_.yaml --target-platform osx-64"
 description = "Build ripgrep-feedstock with variant osx_64_ directly (without setup scripts)"
 [feature.build.tasks."debug-osx_64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_.yaml"
-description = "Build ripgrep-feedstock with variant osx_64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_.yaml --target-platform osx-64"
+description = "Debug ripgrep-feedstock with variant osx_64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant osx_64_"
 [feature.build.tasks."build-osx_arm64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_.yaml --target-platform osx-arm64"
 description = "Build ripgrep-feedstock with variant osx_arm64_ directly (without setup scripts)"
 [feature.build.tasks."debug-osx_arm64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_.yaml"
-description = "Build ripgrep-feedstock with variant osx_arm64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_.yaml --target-platform osx-arm64"
+description = "Debug ripgrep-feedstock with variant osx_arm64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-osx_arm64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant osx_arm64_"
 [feature.build.tasks."build-win_64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_.yaml --target-platform win-64"
 description = "Build ripgrep-feedstock with variant win_64_ directly (without setup scripts)"
 [feature.build.tasks."debug-win_64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_.yaml"
-description = "Build ripgrep-feedstock with variant win_64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_.yaml --target-platform win-64"
+description = "Debug ripgrep-feedstock with variant win_64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-win_64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant win_64_"
 [feature.build.tasks."build-win_arm64_"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_.yaml --target-platform win-arm64"
 description = "Build ripgrep-feedstock with variant win_arm64_ directly (without setup scripts)"
 [feature.build.tasks."debug-win_arm64_"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_arm64_.yaml"
-description = "Build ripgrep-feedstock with variant win_arm64_ directly (without setup scripts)"
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_arm64_.yaml --target-platform win-arm64"
+description = "Debug ripgrep-feedstock with variant win_arm64_ directly (without setup scripts)"
 [feature.build.tasks."inspect-win_arm64_"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_.yaml"
 description = "List contents of ripgrep-feedstock packages built for variant win_arm64_"
